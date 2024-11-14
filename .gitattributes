@@ -1,2 +1,25 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+login = 'bayyje'
+password = '260884'
+print(f"your login {login}\npassword {password}")
+attemts = 3
+
+while True:
+    input_login= input("Enter your login: ")
+    input_password = input("Enter your password: ")
+    if input_login != login:
+        attemts -= 1
+        if attemts == 0:
+            print('Your account was blocked')
+            break
+        print(f'Incorrect login, you have {attemts} more attemts left')
+        continue
+    elif input_password != password:
+        attemts -= 1
+        if attemts == 0:
+            print('Your account was blocked')
+            break
+        print(f'Incorrect password, you have {attemts} more attemts left')
+        continue
+    else:
+        print('Congratulations! You entered into your account')
+        break
